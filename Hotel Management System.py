@@ -68,13 +68,13 @@ while True:
           "[0] EXIT\n")
     choice = only_int("HOW CAN WE HELP YOU TODAY? ")
     if choice == 1:
-        ...
+        show_who_we_are()
     elif choice == 2:
         show_rooms()
     elif choice == 3:
-        ...
+        log_in()
     elif choice == 4:
-        ...
+        sign_up()
     elif choice == 0:
         end = "  GOODBYE!  "
         print("\n" + "-" * len(end))
