@@ -16,7 +16,30 @@ DEFAULT_ROOMS = [
 ]
 
 
+def show_who_we_are():
+    print("\n" + "=" * 50)
+    print("  WHO WE ARE")
+    print("=" * 50)
 
+    print("\n--- OUR MISSION ---\n")
+    print("To provide an exceptional hotel experience built on comfort,\n"
+          "personalized attention and genuine hospitality, making every\n"
+          "guest feel valued from the moment they arrive.")
+
+    print("\n--- OUR VISION ---\n")
+    print("To be recognized as the leading 5-star hotel in the region,\n"
+          "known for excellence in service, elegance and innovation,\n"
+          "and for creating memories our guests carry with them.")
+
+    print("\n--- WHY CHOOSE US? ---\n")
+    print("  * Luxury and comfort: elegant rooms designed for your rest.")
+    print("  * Personalized service: our team attends to every detail.")
+    print("  * Options for every traveler: Single, Double and Suite rooms.")
+    print("  * Fair prices: 5-star quality at transparent rates.")
+    print("  * Easy booking: reserve your room in just a few steps.")
+    print()
+
+    input("Press Enter to return to the main menu...")
 
 
 def show_rooms():
@@ -26,6 +49,27 @@ def show_rooms():
         if room["Active"]:
             print(f"Room {room['Number']} | {room['Type'].capitalize()} | ${room['Price']:.2f} per night")
     print()
+
+
+def rooms_menu():
+    """Submenu shown after the room list is displayed."""
+    while True:
+        print("[1] BOOK A ROOM\n"
+              "[2] RETURN TO MAIN MENU\n")
+        option = only_int("WHAT WOULD YOU LIKE TO DO? ")
+        if option == 1:
+            book_room()
+            break
+        elif option == 2:
+            break
+        else:
+            print("\nInvalid choice, try again.\n")
+
+
+def book_room():
+    # Placeholder: connect your reservation logic here
+    print("\nBooking feature coming soon...\n")
+
 
 def save_rooms(rooms):
     with open(ROOMS_FILE, "w") as f:
@@ -39,19 +83,12 @@ def load_rooms():
         return json.load(f)
 
 
-
 def only_int(prompt):
     while True:
         try:
             return int(input(prompt))
         except ValueError:
             print("Please enter a number.")
-
-
-
-
-
-
 
 
 #main code
@@ -71,6 +108,7 @@ while True:
         show_who_we_are()
     elif choice == 2:
         show_rooms()
+        rooms_menu()
     elif choice == 3:
         log_in()
     elif choice == 4:

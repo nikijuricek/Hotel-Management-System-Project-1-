@@ -1,0 +1,44 @@
+[
+    {
+        "Number": "101",
+        "Type": "Single",
+        "Price": 70.0,
+        "Active": true
+    },
+    {
+        "Number": "102",
+        "Type": "Single",
+        "Price": 70.0,
+        "Active": true
+    },
+    {
+        "Number": "103",
+        "Type": "Single",
+        "Price": 70.0,
+        "Active": true
+    },
+    {
+        "Number": "104",
+        "Type": "Single",
+        "Price": 70.0,
+        "Active": true
+    },
+    {
+        "Number": "105",
+        "Type": "Single",
+        "Price": 70.0,
+        "Active": true
+    },
+    {
+        "Number": "201",
+        "Type": "Double",
+        "Price": 110.0,
+        "Active": true
+    },
+    {
+        "Number": "301",
+        "Type": "Suite",
+        "Price": 220.0,
+        "Active": true
+    }
+]
